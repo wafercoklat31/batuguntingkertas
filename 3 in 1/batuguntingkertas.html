@@ -98,49 +98,41 @@
 
         // Batu
         if (inputUser === 'Batu' && komputer === 'Batu') {
-            document.getElementById('lawan').innerText = '✊ vs ✊'
+            document.getElementById('lawan').innerText = '✊ vs ✊';
             document.getElementById('hasil').innerText = 'Seri';
-            console.log('Seri');
         } else if (inputUser === 'Batu' && komputer === 'Gunting'){
             document.getElementById('lawan').innerText = '✊ vs ✌'
             document.getElementById('hasil').innerText = 'Kamu menang!';
-            console.log('Kamu Menang');
         } else if (inputUser === 'Batu' && komputer === 'Kertas') {
-            document.getElementById('lawan').innerText = '✊ vs ✋'
+            document.getElementById('lawan').innerText = '✊ vs ✋';
             document.getElementById('hasil').innerText = 'Kamu Kalah';
-            console.log('Kamu Kalah')
         }
         
         // Gunting
         if (inputUser === 'Gunting' && komputer === 'Batu') {
-            document.getElementById('lawan').innerText = '✌ vs ✊'
+            document.getElementById('lawan').innerText = '✌ vs ✊';
             document.getElementById('hasil').innerText = 'Kamu Kalah';
-            console.log('Kamu Kalah');
         } else if (inputUser === 'Gunting' && komputer === 'Gunting'){
-            document.getElementById('lawan').innerText = '✌ vs ✌'
+            document.getElementById('lawan').innerText = '✌ vs ✌';
             document.getElementById('hasil').innerText = 'Seri';
-            console.log('Seri');
         } else if (inputUser === 'Gunting' && komputer === 'Kertas') {
-            document.getElementById('lawan').innerText = '✌ vs ✋'
+            document.getElementById('lawan').innerText = '✌ vs ✋';
             document.getElementById('hasil').innerText = 'Kamu menang!';
-            console.log('Kamu Menang')
         }
         
         // Kertas
         if (inputUser === 'Kertas' && komputer === 'Batu') {
-            document.getElementById('lawan').innerText = '✋ vs ✊'
+            document.getElementById('lawan').innerText = '✋ vs ✊';
             document.getElementById('hasil').innerText = 'Kamu menang!';
-            console.log('Kamu Menang');
         } else if (inputUser === 'Kertas' && komputer === 'Gunting'){
-            document.getElementById('lawan').innerText = '✋ vs ✌'
+            document.getElementById('lawan').innerText = '✋ vs ✌';
             document.getElementById('hasil').innerText = 'Kamu Kalah';
-            console.log('Kamu Kalah');
         } else if (inputUser === 'Kertas' && komputer === 'Kertas') {
-            document.getElementById('lawan').innerText = '✋ vs ✋'
+            document.getElementById('lawan').innerText = '✋ vs ✋';
             document.getElementById('hasil').innerText = 'Seri';
-            console.log('Seri')
         }
     }
     </script>
 </body>
+
 </html>
