@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>batu gunting kertas</title>
+    <style>
+    body {
+        background-color: gainsboro;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container {
+        background-color: rgba(56, 56, 56, 0.884);
+        width: 350px;
+        height: 450px;
+        margin: auto;
+        padding: 7px;
+        border-radius: 10px;
+    }
+
+    .judul {
+        color: rgb(219, 219, 219);
+        text-align: center;
+        margin: 20px;
+        font-size: 50px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .button_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+        text-align: center;
+        margin: 3px;
+        border-radius: 100%;
+        background-color: rgb(255, 243, 174);
+    }
+
+    button:hover {
+        background-color: gold;
+        transform:translateY(-2px) ;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        color: azure;
+    }
+
+    #lawan {
+        font-size: 60px;
+        padding: 0px;
+        margin: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Batu Gunting Kertas</h2>
+
+        <div class="button_container">
+            <button onclick="inputUser = 'Batu';main();">✊</button>
+            <button onclick="inputUser = 'Gunting';main();">✌</button>
+            <button onclick="inputUser = 'Kertas';main();">✋</button>
+        </div>
+
+        <p id="lawan"></p>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+    let komputer = '';
+    let random;
+    let inputUser = '';
+
+    function main(){
+
+        // random angka
+        random = Math.random();
+
+
+        // translate randoman angka jadi kata
+        if (random >= 0 && random <= 1/3) {
+            komputer = 'Batu';
+        } else if (random > 1/3 && random < 2/3){
+            komputer = 'Gunting';
+        } else if (random > 2/3 && random <= 1){
+            komputer = 'Kertas';
+        }
+
+
+        // Batu
+        if (inputUser === 'Batu' && komputer === 'Batu') {
+            document.getElementById('lawan').innerText = '✊ vs ✊'
+            document.getElementById('hasil').innerText = 'Seri';
+            console.log('Seri');
+        } else if (inputUser === 'Batu' && komputer === 'Gunting'){
+            document.getElementById('lawan').innerText = '✊ vs ✌'
+            document.getElementById('hasil').innerText = 'Kamu menang!';
+            console.log('Kamu Menang');
+        } else if (inputUser === 'Batu' && komputer === 'Kertas') {
+            document.getElementById('lawan').innerText = '✊ vs ✋'
+            document.getElementById('hasil').innerText = 'Kamu Kalah';
+            console.log('Kamu Kalah')
+        }
+        
+        // Gunting
+        if (inputUser === 'Gunting' && komputer === 'Batu') {
+            document.getElementById('lawan').innerText = '✌ vs ✊'
+            document.getElementById('hasil').innerText = 'Kamu Kalah';
+            console.log('Kamu Kalah');
+        } else if (inputUser === 'Gunting' && komputer === 'Gunting'){
+            document.getElementById('lawan').innerText = '✌ vs ✌'
+            document.getElementById('hasil').innerText = 'Seri';
+            console.log('Seri');
+        } else if (inputUser === 'Gunting' && komputer === 'Kertas') {
+            document.getElementById('lawan').innerText = '✌ vs ✋'
+            document.getElementById('hasil').innerText = 'Kamu menang!';
+            console.log('Kamu Menang')
+        }
+        
+        // Kertas
+        if (inputUser === 'Kertas' && komputer === 'Batu') {
+            document.getElementById('lawan').innerText = '✋ vs ✊'
+            document.getElementById('hasil').innerText = 'Kamu menang!';
+            console.log('Kamu Menang');
+        } else if (inputUser === 'Kertas' && komputer === 'Gunting'){
+            document.getElementById('lawan').innerText = '✋ vs ✌'
+            document.getElementById('hasil').innerText = 'Kamu Kalah';
+            console.log('Kamu Kalah');
+        } else if (inputUser === 'Kertas' && komputer === 'Kertas') {
+            document.getElementById('lawan').innerText = '✋ vs ✋'
+            document.getElementById('hasil').innerText = 'Seri';
+            console.log('Seri')
+        }
+    }
+    </script>
+</body>
+</html>
